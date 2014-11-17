@@ -1,7 +1,6 @@
 nbsForecast <-function(ts='',days) {
 	timeseries<-c(ts);
 	# Necessary Packages
-	install.packages("forecast",repos="http://cran.rstudio.com/")
 	library(forecast)
 	
 	period = ts(timeseries,frequency=1);
