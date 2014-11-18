@@ -2,8 +2,8 @@ nbsForecast <-function(ts='',days) {
 	timeseries<-c(ts);
 	# Necessary Packages
 	library(forecast)
-	
-	period = ts(timeseries,frequency=1);
+
+	period = ts(timeseries,frequency=7);
 	fit<-auto.arima(timeseries,approximation=FALSE);
 	future<-forecast(fit,h=days);
 
